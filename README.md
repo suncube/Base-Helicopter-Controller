@@ -1,10 +1,6 @@
 # Base Helicopter Controller
 This basic system control helicopter for your games or training.<br> 
 <a href = "https://www.youtube.com/watch?v=MnXN8KpDpEk"> Video </a>
-<br>
-<br>
-<a href = "http://u3d.as/nxa"><strong> BUY</strong> Advanced Helicopter Controller</a>
-<br>
 <br> 
 version 1.1<br> 
 - add checkpoint controller<br>
