@@ -8,20 +8,32 @@
 [![AssetStore](https://img.shields.io/badge/-AssetStore-lightgrey.svg)](https://assetstore.unity.com/publishers/14506)
 ![GitHub followers](https://img.shields.io/github/followers/suncube.svg?label=Folow&style=social)
 
+[![Promo](/ReadmeSource/preview1.gif)](https://youtu.be/OLRNz2fY18Q)
+### Version 1.5
+
+ - implement Unity's system inputs
+ - added mobile joystick
+ - refresh graphics
+ - added hybrid ECS sample
 
 
-This basic system control helicopter for your games or training.<br> 
-<a href = "https://www.youtube.com/watch?v=MnXN8KpDpEk"> Video </a>
-<br> 
-version 1.1<br> 
-- add checkpoint controller<br>
-- add race game scene(collect all the checkpoints)<br>
-- fix bugs & simple refactoring <br>
-- realistic physics and behavior model <br> 
-- control of the keyboard<br> 
-- can set up key control helicopter<br> 
-- can set up a helicopter flight mechanics<br>
+
+Mobile inputs
+![](/ReadmeSource/preview2.jpg)
+Keyboard
+![](/ReadmeSource/preview3.jpg)
+
+External resources links:
+
+[Ground & Environment](https://assetstore.unity.com/packages/3d/vegetation/lowpoly-trees-and-rocks-88376)
+
+[Helicopter models](https://assetstore.unity.com/packages/3d/vehicles/air/low-poly-helicopters-pack-free-121151)
+
+[Virtual Joystick](https://assetstore.unity.com/packages/tools/input-management/simple-input-system-113033)
+
+
 
 #
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.donationalerts.com/r/suncube)
+
