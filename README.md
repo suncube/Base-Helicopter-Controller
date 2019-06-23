@@ -29,9 +29,3 @@ External resources links:
 
 [Virtual Joystick](https://assetstore.unity.com/packages/tools/input-management/simple-input-system-113033)
 
-
-
-#
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.donationalerts.com/r/suncube)
-
