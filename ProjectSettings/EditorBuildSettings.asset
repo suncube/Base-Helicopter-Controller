@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/3_HelicopterECS/ArkitHellicopter.unity
-    guid: cb80f16d23356b54cb5ec4c181f1ec52
+    path: Assets/2_NewHelicopter/FreeRide.unity
+    guid: ed99b7de30970ef4bac5ddee481e216d
   m_configObjects: {}
