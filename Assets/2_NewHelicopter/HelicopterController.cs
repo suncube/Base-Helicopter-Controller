@@ -8,7 +8,6 @@ namespace NewHelicopter
     //
     public class HelicopterController : MonoBehaviour
     {
-        
         private string horizontalAxis = "Horizontal";
         private string verticalAxis = "Vertical";
         private string jumpButton = "Jump";
@@ -22,8 +21,10 @@ namespace NewHelicopter
         public Rigidbody HelicopterModel;
         public HeliRotorController MainRotorController;
         public HeliRotorController SubRotorController;
+        public DustAirController DustAirController;
 
         [Header("Fly Settings")]
+        public LayerMask GroundMaskLayer = 1;
         public float TurnForce = 3f;
         public float ForwardForce = 10f;
         public float ForwardTiltForce = 20f;
@@ -49,6 +50,19 @@ namespace NewHelicopter
             }
         }
 
+        private float distanceToGround ;
+        public float DistanceToGround
+        {
+            get {return distanceToGround; }
+        }
+
+        private Vector3 pointToGround;
+        public Vector3 PointToGround
+        {
+            get { return pointToGround; }
+        }
+
+
         private Vector2 hMove = Vector2.zero;
         private Vector2 hTilt = Vector2.zero;
         private float hTurn = 0f;
@@ -60,6 +74,8 @@ namespace NewHelicopter
             LiftProcess();
             MoveProcess();
             TiltProcess();
+
+            Visualize();
         }
 
         private void MoveProcess()
@@ -72,6 +88,19 @@ namespace NewHelicopter
 
         private void LiftProcess()
         {
+            // to ground distance
+            RaycastHit hit;
+            var direction = transform.TransformDirection(Vector3.down);
+            var ray = new Ray(transform.position, direction);
+            if (Physics.Raycast(ray, out hit, 300, GroundMaskLayer))
+            {
+                Debug.DrawLine(transform.position, hit.point, Color.cyan);
+                distanceToGround = hit.distance;
+                pointToGround = hit.point;
+
+                //isOnGround = hit.distance < 2f;
+            }
+
             var upForce = 1 - Mathf.Clamp(HelicopterModel.transform.position.y / EffectiveHeight, 0, 1);
             upForce = Mathf.Lerp(0f, EngineForce, upForce) * HelicopterModel.mass;
             HelicopterModel.AddRelativeForce(Vector3.up * upForce);
@@ -142,6 +171,30 @@ namespace NewHelicopter
         private void OnCollisionExit()
         {
             IsOnGround = false;
+        }
+
+//TODO temp move to events
+        private void Visualize()
+        {
+            if (DustAirController != null)
+            {
+                DustAirController.ProgressEngineValue(EngineForce);
+                DustAirController.VisualizeDustGround(DistanceToGround, PointToGround);
+            }
+
+            if (UIViewController.runtime.HeigthUpView != null)
+                UIViewController.runtime.HeigthUpView.text = string.Format("To Ground [ {0} ] m",
+                    (int)DistanceToGround);
+
+            if (UIViewController.runtime.EngineForceView != null)
+                UIViewController.runtime.EngineForceView.text = string.Format("Engine [ {0} ] ", (int)EngineForce);
+
+            // if (UIViewController.runtime.UpDragView != null)
+            //     UIGameController.runtime.UpDragView.text = string.Format("Up Force [ {0} ] f",
+            //         (int)CurrentHeightForce);
+
+            if (UIViewController.runtime.HeigthView != null)
+                UIViewController.runtime.HeigthView.text = string.Format("Heigth  [ {0} ] m", (int)transform.position.y);
         }
 
     }
