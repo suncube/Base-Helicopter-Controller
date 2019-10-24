@@ -6,8 +6,17 @@
 [![AssetStore](https://img.shields.io/badge/-AssetStore-lightgrey.svg)](https://assetstore.unity.com/publishers/14506)
 ![GitHub followers](https://img.shields.io/github/followers/suncube.svg?label=Folow&style=social)
 
-[![Promo](/ReadmeSource/preview1.gif)](https://youtu.be/OLRNz2fY18Q)
+### Version 1.6
+[![Promo](/ReadmeSource/preview4.gif)](https://youtu.be/rSJo0wo1zOU)
+
+ - added universal RadarSystem
+ - added flight HUD
+ - added temp DustFX(animated ground dust of working propeller)
+
+ 
+
 ### Version 1.5
+[![Promo](/ReadmeSource/preview1.gif)](https://youtu.be/OLRNz2fY18Q)
 
  - implement Unity's system inputs
  - added mobile joystick
@@ -28,4 +37,3 @@ External resources links:
 [Helicopter models](https://assetstore.unity.com/packages/3d/vehicles/air/low-poly-helicopters-pack-free-121151)
 
 [Virtual Joystick](https://assetstore.unity.com/packages/tools/input-management/simple-input-system-113033)
-
