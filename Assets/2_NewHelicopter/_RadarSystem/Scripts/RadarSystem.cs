@@ -10,6 +10,9 @@ namespace SunCube.Radar
 
         public Transform PlayerTarget;
         public Transform PlayerCamera;
+        [Header("View")]
+        public CanvasScaler RadarCanvas;
+        public float ScaleFactor = 3f;
 
         [Header("")]
         public float RadarDistance;
@@ -35,6 +38,8 @@ namespace SunCube.Radar
             runtime = this;
             if (!PlayerCamera)
                 PlayerCamera = Camera.main.transform;
+
+            RadarCanvas.scaleFactor = ScaleFactor;
         }
         private void FixedUpdate()
         {
