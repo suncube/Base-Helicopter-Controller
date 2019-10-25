@@ -6,8 +6,9 @@
 [![AssetStore](https://img.shields.io/badge/-AssetStore-lightgrey.svg)](https://assetstore.unity.com/publishers/14506)
 ![GitHub followers](https://img.shields.io/github/followers/suncube.svg?label=Folow&style=social)
 
-### Version 1.6
+
 [![Promo](/ReadmeSource/preview4.gif)](https://youtu.be/rSJo0wo1zOU)
+### Version 1.6
 
  - added universal RadarSystem
  - added flight HUD
@@ -16,7 +17,6 @@
  
 
 ### Version 1.5
-[![Promo](/ReadmeSource/preview1.gif)](https://youtu.be/OLRNz2fY18Q)
 
  - implement Unity's system inputs
  - added mobile joystick
