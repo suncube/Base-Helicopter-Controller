@@ -6,6 +6,7 @@
 [![AssetStore](https://img.shields.io/badge/-AssetStore-lightgrey.svg)](https://assetstore.unity.com/publishers/14506)
 ![GitHub followers](https://img.shields.io/github/followers/suncube.svg?label=Folow&style=social)
 
+[FORUM](https://forum.unity.com/threads/base-helicopter-controller.795495/)
 
 [![Promo](/ReadmeSource/preview4.gif)](https://youtu.be/rSJo0wo1zOU)
 ### Version 1.6
